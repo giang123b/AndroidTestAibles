@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="text_size_h6">21sp</dimen>
+    <dimen name="text_size_h5">25sp</dimen>
+    <dimen name="text_size_subtitle">18sp</dimen>
+    <dimen name="space_tiny">4sp</dimen>
+    <dimen name="space_small">8sp</dimen>
+    <dimen name="space_normal">16sp</dimen>
+    <dimen name="space_large">32sp</dimen>
+    <dimen name="space_huge">64sp</dimen>
+</resources>
