@@ -40,6 +40,6 @@
     </fragment>
     <fragment
         android:id="@+id/newFeedsFragment"
-        android:name="com.savis.newfeeds.view.NewFeedsFragment"
+        android:name="com.river.newfeeds.view.NewFeedsFragment"
         android:label="NewFeedsFragment" />
 </navigation>

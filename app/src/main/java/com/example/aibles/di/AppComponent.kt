@@ -6,7 +6,7 @@ import com.aibles.repository.di.repositoryModule
 import com.aibles.userdetail.di.featureUserDetail
 import com.example.homescreen.di.featureHomeScreen
 import com.example.splash.di.featureSplash
-import com.savis.newfeeds.di.featureNewFeedsScreen
+import com.river.newfeeds.di.featureNewFeedsScreen
 
 //
 val appComponent = listOf(

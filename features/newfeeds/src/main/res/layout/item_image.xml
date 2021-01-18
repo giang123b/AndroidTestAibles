@@ -1,10 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ImageView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
-    android:layout_height="100dp"
-    android:maxHeight="@dimen/max_height"
-    android:src="@drawable/ic_baseline_image_24"
-    android:adjustViewBounds="true"
-    >
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
 
-</ImageView>
+    <data>
+
+        <variable
+            name="post"
+            type="com.river.newfeeds.domain.model.Post" />
+    </data>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:maxHeight="@dimen/max_height"
+        android:src="@drawable/ic_baseline_image_24"
+        android:loadImage="@{post.images.href}"
+        android:adjustViewBounds="true">
+
+    </ImageView>
+</layout>
