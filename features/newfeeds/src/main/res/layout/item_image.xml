@@ -2,6 +2,7 @@
 <ImageView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="100dp"
+    android:maxHeight="@dimen/max_height"
     android:src="@drawable/ic_baseline_image_24"
     android:adjustViewBounds="true"
     >
