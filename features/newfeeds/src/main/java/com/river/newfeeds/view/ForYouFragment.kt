@@ -32,15 +32,13 @@ class ForYouFragment : Fragment() {
         fragmentForYouBinding.forYouViewModel = forYouViewModel
         fragmentForYouBinding.lifecycleOwner = viewLifecycleOwner
         return fragmentForYouBinding.root
+
+//        return inflater.inflate(R.layout.fragment_for_you, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-//        val recyclerView_news_forYouScreen: RecyclerView =
-//            view.findViewById(R.id.recyclerView_news_forYouScreen)
-
         recyclerView_news_forYouScreen.adapter = forYouAdapter
-
         recyclerView_news_forYouScreen.layoutManager =
             LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false);
     }

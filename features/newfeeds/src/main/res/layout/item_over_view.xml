@@ -11,12 +11,17 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:maxHeight="@dimen/max_height">
+        android:maxHeight="@dimen/max_height"
+        android:layout_margin="@dimen/space_normal"
+        >
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@{post.title}" />
+            android:text="@{post.title}"
+            android:padding="@dimen/space_normal"
+            android:textSize="@dimen/text_size_h6"
+            />
 
     </androidx.cardview.widget.CardView>
 </layout>

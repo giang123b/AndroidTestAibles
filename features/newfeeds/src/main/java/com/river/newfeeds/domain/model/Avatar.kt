@@ -7,7 +7,7 @@ class Avatar(
     var href: String,
 
     @SerializedName("main_color")
-    var mainColor: Image,
+    var mainColor: String,
 
     @SerializedName("width")
     var width: Int,

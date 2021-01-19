@@ -1,10 +1,14 @@
 package com.river.newfeeds.domain.repository
 
 import androidx.lifecycle.LiveData
-import com.aibles.repository.utils.Resource
 import com.river.newfeeds.domain.model.Post
+import com.aibles.repository.utils.Resource
+import com.river.newfeeds.domain.model.Items
+import retrofit2.Call
+import retrofit2.Response
 
 interface PostRepository {
 
-    fun getPost() : LiveData<Resource<ArrayList<Post>>>
+    suspend fun getPost() : LiveData<Resource<Items>>
+//    suspend fun getPost() : Call<Resource<Items>>
 }

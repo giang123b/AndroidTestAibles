@@ -8,12 +8,18 @@
         <variable
             name="post"
             type="com.river.newfeeds.domain.model.Post" />
+
+        <variable
+            name="forYouViewModel"
+            type="com.river.newfeeds.view_model.ForYouViewModel" />
     </data>
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:maxHeight="@dimen/max_height">
+        android:maxHeight="@dimen/max_height"
+        android:layout_margin="@dimen/space_normal"
+        >
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -29,9 +35,11 @@
                 android:textStyle="bold" />
 
             <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView_images_itemGalleryScreen"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 tools:listitem="@layout/item_image"
+                app:setListImage="@{post.images}"
                 />
         </LinearLayout>
 

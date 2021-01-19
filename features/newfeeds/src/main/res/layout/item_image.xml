@@ -5,16 +5,16 @@
 
         <variable
             name="post"
-            type="com.river.newfeeds.domain.model.Post" />
+            type="com.river.newfeeds.domain.model.Image" />
     </data>
 
     <ImageView
+        android:id="@+id/imageView_image_itemImageScreen"
         android:layout_width="wrap_content"
         android:layout_height="100dp"
-        android:maxHeight="@dimen/max_height"
         android:src="@drawable/ic_baseline_image_24"
-        android:loadImage="@{post.images.href}"
-        android:adjustViewBounds="true">
+        android:loadImage="@{post.href}"
+        >
 
     </ImageView>
 </layout>

@@ -1,6 +1,9 @@
 package com.river.newfeeds.domain.model
 
 import com.google.gson.annotations.SerializedName
+import java.util.*
+import kotlin.collections.ArrayList
+
 class Post(
     @SerializedName("document_id")
     var documentId: String,
@@ -27,9 +30,11 @@ class Post(
     var avatar: Avatar,
 
     @SerializedName("images")
-    var images: Image,
+    var images: ArrayList<Image>?,
 
     @SerializedName("content")
-    var content: String
+    var content: Objects
 ) {
+
+
 }

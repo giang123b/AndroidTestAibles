@@ -20,7 +20,6 @@
             <option value="$PROJECT_DIR$/data/remote" />
             <option value="$PROJECT_DIR$/data/repository" />
             <option value="$PROJECT_DIR$/features" />
-            <option value="$PROJECT_DIR$/features/homescreen" />
             <option value="$PROJECT_DIR$/features/newfeeds" />
             <option value="$PROJECT_DIR$/features/splash" />
             <option value="$PROJECT_DIR$/features/userdetail" />

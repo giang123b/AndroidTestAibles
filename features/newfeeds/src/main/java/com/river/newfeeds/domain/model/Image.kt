@@ -7,7 +7,7 @@ class Image(
     var href: String,
 
     @SerializedName("main_color")
-    var mainColor: Image,
+    var mainColor: String,
 
     @SerializedName("width")
     var width: Int,
@@ -15,4 +15,7 @@ class Image(
     @SerializedName("height")
     var height: Int
 ) {
+    override fun toString(): String {
+        return "image detail:$href\n mainColor:$mainColor"
+    }
 }

@@ -6,12 +6,18 @@
         <variable
             name="post"
             type="com.river.newfeeds.domain.model.Post" />
+
+        <variable
+            name="image"
+            type="com.river.newfeeds.domain.model.Image" />
     </data>
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:maxHeight="@dimen/max_height">
+        android:maxHeight="@dimen/max_height"
+        android:layout_margin="@dimen/space_normal"
+        >
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -41,7 +47,7 @@
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:src="@drawable/ic_baseline_image_24"
-                    android:loadImage="@{post.images.href}"
+                    android:loadImage="@{image.href}"
                     android:adjustViewBounds="true"
                     android:scaleType="centerCrop"
                     />
@@ -50,7 +56,7 @@
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:src="@drawable/ic_baseline_image_24"
-                    android:loadImage="@{post.images.href}"
+                    android:loadImage="@{image.href}"
                     android:adjustViewBounds="true"
                     android:scaleType="centerCrop" />
 

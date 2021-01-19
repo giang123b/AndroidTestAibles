@@ -4,7 +4,7 @@ import com.google.gson.annotations.SerializedName
 
 class Publisher(
     @SerializedName("id")
-    var id: Int,
+    var id: String,
 
     @SerializedName("name")
     var name: String,

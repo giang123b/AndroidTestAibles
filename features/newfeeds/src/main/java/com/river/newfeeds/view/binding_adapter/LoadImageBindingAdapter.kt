@@ -1,4 +1,4 @@
-package com.river.newfeeds.view
+package com.river.newfeeds.view.binding_adapter
 
 import android.widget.ImageView
 import androidx.databinding.BindingAdapter
