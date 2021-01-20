@@ -2,7 +2,6 @@ package com.river.newfeeds.data.repository
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import com.aibles.model.User
 import com.aibles.repository.utils.NetworkBoundResource
 import com.aibles.repository.utils.Resource
 import com.river.newfeeds.domain.model.Post

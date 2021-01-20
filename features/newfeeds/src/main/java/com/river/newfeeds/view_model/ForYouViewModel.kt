@@ -2,7 +2,6 @@ package com.river.newfeeds.view_model
 
 import android.util.Log
 import androidx.lifecycle.*
-import com.aibles.model.User
 import com.aibles.repository.utils.Resource
 import com.river.newfeeds.domain.model.Items
 import com.river.newfeeds.domain.model.Post

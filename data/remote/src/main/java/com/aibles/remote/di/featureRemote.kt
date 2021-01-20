@@ -1,7 +1,5 @@
 package com.aibles.remote.di
 
-import com.aibles.remote.UserDataSource
-import com.aibles.remote.UserService
 import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient

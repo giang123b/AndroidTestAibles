@@ -3,7 +3,6 @@ package com.river.newfeeds.view.binding_adapter
 import android.widget.ImageView
 import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.aibles.model.User
 import com.aibles.repository.utils.Resource
 import com.bumptech.glide.Glide
 
