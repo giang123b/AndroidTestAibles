@@ -1,46 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="post"
+            type="com.river.newfeeds.domain.model.Post" />
+
+        <variable
+            name="image"
+            type="com.river.newfeeds.domain.model.Image" />
+    </data>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/space_normal"
+        android:layout_marginTop="@dimen/space_large"
+        android:background="@drawable/background_stroke"
+        android:padding="@dimen/space_normal"
         android:orientation="vertical">
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Title"
-            android:textSize="@dimen/text_size_h5"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:text="@{post.contentType}"
+            android:textColor="@android:color/holo_red_light"
+            android:textSize="@dimen/text_size_h6"
             android:textStyle="bold" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="description"
-            android:textSize="@dimen/text_size_subtitle" />
+            android:text="@{post.title}"
+            android:textSize="@dimen/text_size_subtitle"
+            android:textStyle="bold"
+            android:textColor="@color/black" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="right">
+            android:gravity="center"
+            >
 
             <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:src="@drawable/ic_baseline_person_24" />
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:adjustViewBounds="true"
+                android:loadImage="@{post.images[1].href}"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_baseline_image_24" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/space_tiny"
-                android:text="name"
-                android:textSize="@dimen/text_size_subtitle" />
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:adjustViewBounds="true"
+                android:loadImage="@{post.images[0].href}"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_baseline_image_24" />
 
         </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{post.description}" />
+
     </LinearLayout>
 
-
-</androidx.cardview.widget.CardView>
+</layout>

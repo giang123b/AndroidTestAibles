@@ -1,0 +1,37 @@
+//apply from: '../../android_feature_dependencies.gradle'
+//apply plugin: 'kotlin-android'
+//apply plugin: 'kotlin-kapt'
+//apply plugin: "androidx.navigation.safeargs.kotlin"
+
+apply plugin: 'kotlin'
+
+dependencies {
+    // KOTLIN
+    implementation KotlinLibraries.kotlin
+    // NETWORK
+    implementation Libraries.retrofitCoroutineAdapter
+    implementation Libraries.gson
+    implementation Libraries.retrofit
+    implementation Libraries.retrofitGsonConverter
+    implementation Libraries.httpLoggingInterceptor
+    // DATA MODULE
+    implementation project(Modules.model)
+    // KOIN
+    implementation Libraries.koin
+    implementation Libraries.koinViewModel
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.2.0'
+    // TEST
+    testImplementation TestLibraries.junit
+    testImplementation TestLibraries.koin
+    testImplementation TestLibraries.mockWebServer
+
+//    implementation KotlinLibraries.kotlinCoroutineCore
+////    implementation Libraries.
+//    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+//
+//    implementation 'com.android.support:design:26.1.0'
+//    implementation 'com.android.support:support-v4:26.1.0'
+//
+//    //RxJava adapter
+//    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.6.2'
+}

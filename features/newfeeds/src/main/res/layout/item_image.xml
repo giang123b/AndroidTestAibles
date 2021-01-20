@@ -1,9 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ImageView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
-    android:layout_height="100dp"
-    android:src="@drawable/ic_baseline_image_24"
-    android:adjustViewBounds="true"
-    >
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
 
-</ImageView>
+    <data>
+
+        <variable
+            name="post"
+            type="com.river.newfeeds.domain.model.Image" />
+    </data>
+
+    <ImageView
+        android:id="@+id/imageView_image_itemImageScreen"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_baseline_image_24"
+        android:loadImage="@{post.href}"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:layout_margin="@dimen/space_normal"
+        >
+
+    </ImageView>
+</layout>

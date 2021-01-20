@@ -1,0 +1,15 @@
+apply from: '../../android_feature_dependencies.gradle'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: "androidx.navigation.safeargs.kotlin"
+
+android {
+    dataBinding {
+        enabled true
+    }
+}
+
+dependencies {
+    // GLIDE
+    implementation Libraries.glide
+}

@@ -1,28 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:maxHeight="300dp">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="post"
+            type="com.river.newfeeds.domain.model.Post" />
+
+        <variable
+            name="forYouViewModel"
+            type="com.river.newfeeds.view_model.ForYouViewModel" />
+    </data>
+
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_margin="@dimen/space_normal"
-        >
+        android:layout_marginTop="@dimen/space_large"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:text="@{post.contentType}"
+            android:textColor="@android:color/holo_red_light"
+            android:textSize="@dimen/text_size_h6"
+            android:textStyle="bold" />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Title"
-            android:textSize="@dimen/text_size_h5"
-            android:textStyle="bold"
-            />
+            android:text="@{post.title}"
+            android:textSize="@dimen/text_size_subtitle"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView_images_itemGalleryScreen"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            tools:listitem="@layout/item_image"
-            />
+            app:setListImage="@{post.images}"
+            tools:listitem="@layout/item_image" />
     </LinearLayout>
-
-</androidx.cardview.widget.CardView>
+</layout>
