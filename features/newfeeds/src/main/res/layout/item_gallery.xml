@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
@@ -14,34 +14,35 @@
             type="com.river.newfeeds.view_model.ForYouViewModel" />
     </data>
 
-    <androidx.cardview.widget.CardView
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:maxHeight="@dimen/max_height"
-        android:layout_margin="@dimen/space_normal"
-        >
+        android:layout_marginTop="@dimen/space_large"
+        android:orientation="vertical">
 
-        <LinearLayout
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:text="@{post.contentType}"
+            android:textColor="@android:color/holo_red_light"
+            android:textSize="@dimen/text_size_h6"
+            android:textStyle="bold" />
+
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_margin="@dimen/space_normal">
+            android:text="@{post.title}"
+            android:textSize="@dimen/text_size_subtitle"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@{post.title}"
-                android:textSize="@dimen/text_size_h5"
-                android:textStyle="bold" />
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recyclerView_images_itemGalleryScreen"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                tools:listitem="@layout/item_image"
-                app:setListImage="@{post.images}"
-                />
-        </LinearLayout>
-
-    </androidx.cardview.widget.CardView>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView_images_itemGalleryScreen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:setListImage="@{post.images}"
+            tools:listitem="@layout/item_image" />
+    </LinearLayout>
 </layout>

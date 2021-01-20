@@ -18,9 +18,6 @@ import org.koin.android.viewmodel.ext.android.viewModel
 class ForYouFragment : Fragment() {
 
     val forYouAdapter = ForYouAdapter()
-//    lateinit var forYouViewModel: ForYouViewModel
-
-
     private val forYouViewModel: ForYouViewModel by viewModel()
     private lateinit var fragmentForYouBinding: FragmentForYouBinding
 
@@ -32,15 +29,13 @@ class ForYouFragment : Fragment() {
         fragmentForYouBinding.forYouViewModel = forYouViewModel
         fragmentForYouBinding.lifecycleOwner = viewLifecycleOwner
         return fragmentForYouBinding.root
-
-//        return inflater.inflate(R.layout.fragment_for_you, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         recyclerView_news_forYouScreen.adapter = forYouAdapter
         recyclerView_news_forYouScreen.layoutManager =
-            LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false);
+            LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
     }
 
 }

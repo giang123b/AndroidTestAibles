@@ -21,7 +21,7 @@ dependencies {
     // FEATURES modules
 //    implementation project(Modules.featureHome)
     implementation project(Modules.featureSplash)
-    implementation project(Modules.featureUserDetail)
+//    implementation project(Modules.featureUserDetail)
     implementation project(Modules.featureNewfeeds)
     // NAVIGATION
     implementation project(Modules.navigation)

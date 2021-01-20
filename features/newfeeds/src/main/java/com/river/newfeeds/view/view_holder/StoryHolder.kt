@@ -1,29 +1,20 @@
 package com.river.newfeeds.view.view_holder
 
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.river.newfeeds.databinding.ItemStoryBinding
 import com.river.newfeeds.domain.model.Post
+import com.river.newfeeds.view.ImageAdapter
+import kotlinx.android.synthetic.main.item_story.view.*
 
 class StoryHolder (private val binding: ItemStoryBinding): RecyclerView.ViewHolder(binding.root){
     fun bindData(post: Post){
         binding.post = post
+        val homeAdapter = ImageAdapter()
+        itemView.recyclerView_images_itemStoryScreen.adapter = homeAdapter
 
-//        Picasso.get().load("https://i.pinimg.com/236x/3f/c6/07/3fc607bd10827a23185a60253d0e4873.jpg")
-//            .placeholder(R.drawable.avatar)
-//            .into(
-//                itemView.imageView_avatarPost_layoutPostScreen)
-
-//        itemView.textView_authorPost_layoutPostScreen.text = post.name
-//        itemView.textView_timePost_layoutPostScreen.text = post.time
-//        itemView.textView_authorPost_layoutPostScreen.text = post.uid
-//        itemView.textView_descriptionPost_layoutPostScreen.text = post.caption
-
-//        Picasso.get().load(post.image).placeholder(R.drawable.avatar)
-//            .into(
-//                itemView.imageView_imagePost_layoutPostScreen)
-
-//        itemView.textView_amountLike_layoutPostScreen.text = post.like.toString()
-//        itemView.textView_amountComment_layoutPostScreen.text = post.comment.toString()
-//        itemView.textView_amountShare_layoutPostScreen.text = post.share.toString()
+        itemView.recyclerView_images_itemStoryScreen.layoutManager =
+            LinearLayoutManager(itemView.context, LinearLayoutManager.HORIZONTAL, false)
     }
 }

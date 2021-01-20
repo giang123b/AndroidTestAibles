@@ -33,7 +33,7 @@ class Post(
     var images: ArrayList<Image>?,
 
     @SerializedName("content")
-    var content: Objects
+    var content: Content
 ) {
 
 

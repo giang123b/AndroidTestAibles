@@ -35,40 +35,4 @@ class ForYouViewModel(private val getPostsUseCase: GetPostsUseCase) : ViewModel(
             Log.e("Image :", it.data?.items?.get(1)?.images.toString())
         }
     }
-
-
-//    private fun getPosts() = viewModelScope.launch(Dispatchers.Main) {
-////        getPostsUseCase().?.data?.let { posts.addAll(it) }
-//        val call: Call<Resource<Items>> = getPostsUseCase()
-//        call?.enqueue(object : Callback<Resource<Items>> {
-//
-//            override fun onResponse(
-//                call: Call<Resource<Items>>,
-//                response: Response<Resource<Items>>
-//            ) {
-//                val loginResponse: ArrayList<Post>? = response.body()
-//                _posts.removeSource(postsSource)
-//                withContext(Dispatchers.IO) {
-//                    postsSource.value = response.body()
-//                }
-//                _posts.addSource(postsSource) {
-//                    _posts.value = it
-//                    Log.e("data :", it.toString())
-//                }
-//                Log.e("onResponse ", response.body().toString())
-//
-//                val forYouAdapter = ForYouAdapter()
-//                response.body()?.data?.let {
-//                    forYouAdapter.updateData(it.items)
-//                    Log.e("data ", it.toString())
-//                }
-//            }
-//
-//            override fun onFailure(call: Call<Resource<Items>>, t: Throwable) {
-//                Log.e("onFailure ", t.toString())
-//                call.cancel()
-//            }
-//        })
-//    }
-
 }

@@ -14,10 +14,10 @@ class ImageHolder (private val binding: ItemImageBinding): RecyclerView.ViewHold
         binding.post = post
 
 
-        Picasso.get().load("https://i.pinimg.com/236x/3f/c6/07/3fc607bd10827a23185a60253d0e4873.jpg")
-            .placeholder(R.drawable.ic_baseline_image_24)
-            .into(
-                itemView.imageView_image_itemImageScreen)
+//        Picasso.get().load("https://i.pinimg.com/236x/3f/c6/07/3fc607bd10827a23185a60253d0e4873.jpg")
+//            .placeholder(R.drawable.ic_baseline_image_24)
+//            .into(
+//                itemView.imageView_image_itemImageScreen)
 
 //        itemView.textView_authorPost_layoutPostScreen.text = post.name
 //        itemView.textView_timePost_layoutPostScreen.text = post.time
