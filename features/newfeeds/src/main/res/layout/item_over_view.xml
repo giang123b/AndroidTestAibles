@@ -7,13 +7,20 @@
         <variable
             name="post"
             type="com.river.newfeeds.domain.model.Post" />
+
+        <variable
+            name="viewModel"
+            type="com.river.newfeeds.view_model.ForYouViewModel" />
     </data>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/space_large"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:onClick="@{() -> viewModel.openDetailPost()}"
+        android:clickable="true"
+        >
 
         <TextView
             android:layout_width="match_parent"

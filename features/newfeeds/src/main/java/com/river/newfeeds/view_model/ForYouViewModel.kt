@@ -2,11 +2,15 @@ package com.river.newfeeds.view_model
 
 import android.util.Log
 import androidx.lifecycle.*
+import androidx.navigation.findNavController
 import com.aibles.repository.utils.Resource
+import com.example.navigation.NavigationCommand
 import com.river.newfeeds.domain.model.Items
 import com.river.newfeeds.domain.model.Post
 import com.river.newfeeds.domain.usecase.GetPostsUseCase
 import com.river.newfeeds.view.ForYouAdapter
+import com.river.newfeeds.view.ForYouFragment
+import com.river.newfeeds.view.NewFeedsFragmentDirections
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -30,8 +34,11 @@ class ForYouViewModel(private val getPostsUseCase: GetPostsUseCase) : ViewModel(
         }
         _posts.addSource(postsSource) {
             _posts.value = it
-            Log.e("data :", it.toString())
-            Log.e("Image :", it.data?.items?.get(1)?.images.toString())
         }
+    }
+
+    fun openDetailPost(){
+        NavigationCommand.To(NewFeedsFragmentDirections.actionNewFeedsFragmentToDetailFragment())
+        Log.e("cogoi", "cogoi")
     }
 }

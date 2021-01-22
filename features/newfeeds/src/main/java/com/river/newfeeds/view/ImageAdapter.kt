@@ -24,22 +24,11 @@ class ImageAdapter() : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
         )
     }
 
-//    override fun getItemViewType(position: Int): Int {
-//        if ((mListData[position].contentType) == "overview") return OVERVIEW
-//        if ((mListData[position].contentType) == "story") return STORY
-//        if ((mListData[position].contentType) == "gallery") return GALLERY
-//        if ((mListData[position].contentType) == "video") return VIDEO
-//        if ((mListData[position].contentType) == "article") return ARTICLE
-//        return LONG_FORM
-//    }
 
     override fun getItemCount() = mListData.size
 
     fun updateData(data: ArrayList<Image>) {
-//        val diffCallback = ForYouDiffCallback(mListData, data)
-//        val diffResult = DiffUtil.calculateDiff(diffCallback)
         mListData.clear()
         mListData.addAll(data)
-//        diffResult.dispatchUpdatesTo(this)
     }
 }

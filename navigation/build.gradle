@@ -11,5 +11,5 @@ dependencies {
 //    implementation project(Modules.featureUserDetail)
 //    implementation project(Modules.featureDetail)
 
-//    implementation project(Modules.featureNewfeeds)
+//    implementation project(Modules.featureDetail)
 }

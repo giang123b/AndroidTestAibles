@@ -17,7 +17,7 @@ object Modules {
 
     val featureHome = ":features:homescreen"
     val featureSplash = ":features:splash"
-    val featureUserDetail = ":features:userdetail"
+    val featureDetail = ":features:detail"
     val featureNewfeeds= ":features:newfeeds"
 }
 

@@ -9,9 +9,6 @@ import retrofit2.Call
 import retrofit2.Response
 
 class GetPostsUseCase(private val postRepository: PostRepository) {
-//    suspend operator fun invoke(): LiveData<Resource<List<Post>>> {
-//        return postRepository.getPost()
-//    }
 
     suspend operator fun invoke(): LiveData<Resource<Items>> {
         return postRepository.getPost()

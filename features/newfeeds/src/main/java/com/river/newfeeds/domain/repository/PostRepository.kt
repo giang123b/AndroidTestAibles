@@ -10,5 +10,4 @@ import retrofit2.Response
 interface PostRepository {
 
     suspend fun getPost() : LiveData<Resource<Items>>
-//    suspend fun getPost() : Call<Resource<Items>>
 }

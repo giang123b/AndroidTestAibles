@@ -1,5 +1,6 @@
 package com.example.aibles.di
 
+import com.aibles.detail.di.featureDetailScreen
 import com.aibles.local.di.localModule
 import com.aibles.remote.di.createRemoteModule
 import com.aibles.repository.di.repositoryModule
@@ -12,7 +13,7 @@ val appComponent = listOf(
     createRemoteModule("https://raw.githubusercontent.com/"),
 //    featureHomeScreen,
     featureSplash,
-//    featureUserDetail,
+    featureDetailScreen,
     featureNewFeedsScreen,
     repositoryModule,
     localModule

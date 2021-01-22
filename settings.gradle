@@ -1,3 +1,4 @@
+include ':features:detail'
 include ':features:newfeeds'
 include ':data:local'
 include ':data:repository'

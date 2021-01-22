@@ -5,7 +5,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.lifecycle.ViewModelProviders
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.river.newfeeds.R
@@ -36,6 +38,17 @@ class ForYouFragment : Fragment() {
         recyclerView_news_forYouScreen.adapter = forYouAdapter
         recyclerView_news_forYouScreen.layoutManager =
             LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
+
+//        recyclerView_news_forYouScreen.setOnClickListener {
+////            view.findNavController()
+////                .navigate(R.id.action_newFeedsFragment_to_detailFragment)
+//
+//            Toast.makeText(context, "co click!", Toast.LENGTH_LONG).show()
+//        }
+
+//        ForYouFragmentDirac
     }
+
+
 
 }

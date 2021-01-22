@@ -41,5 +41,13 @@
     <fragment
         android:id="@+id/newFeedsFragment"
         android:name="com.river.newfeeds.view.NewFeedsFragment"
-        android:label="NewFeedsFragment" />
+        android:label="NewFeedsFragment" >
+        <action
+            android:id="@+id/action_newFeedsFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.aibles.detail.view.DetailFragment"
+        android:label="DetailFragment" />
 </navigation>

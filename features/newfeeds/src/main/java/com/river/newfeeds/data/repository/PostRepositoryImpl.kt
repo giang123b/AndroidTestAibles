@@ -22,13 +22,5 @@ class PostRepositoryImpl (private val postDataSource: PostDataSource): PostRepos
             liveData.postValue(Resource.error(Throwable(), null))
         }
         return liveData
-        // tutu banj oi
-            // cai List<Post> nay bay gio sua thanh Items chu?
-        // vi toi sua no roi - ok b
     }
-
-//    override suspend fun getPost(): Call<Resource<Items>> {
-//
-//        return postDataSource.getPosts()
-//    }
 }
